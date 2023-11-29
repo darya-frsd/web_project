@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="../styles/articles.css">
 </head>
 <body>
+
     <header class="header">
-        <nav class="nav">
+        <nav class="nav-section">
             <div class="logo">
                 <h1 class="logo__text">BookMyStay</h1>
             </div>
@@ -22,6 +23,7 @@
             </div>
         </nav>
     </header>
+
     <main class="main">
         <section class="main-section">
             <section class="main-section__text-container">
@@ -37,6 +39,7 @@
                 <button class="search-box__search-button">Поиск</button>
             </section>
         </section>
+
         <!--
         <section class="main-section__top">
             <div>
@@ -45,56 +48,100 @@
             </div>
         </section> -->
 
-
         <h1>Специальные предложения:</h1>
+        
         <div class="ads-container">
             <div class="ad">
                 <section class="main-article__section">
+                    <img src="../styles/images/sahalin_3.0.jpg" alt="Sakhalin Image" class="main-article__section-image">
                     <div class="main-article__section-text">
                         <h2 class="main-article__section-title">Тур в Сахалин</h2>
+                        <p>Погрузитесь в красоту горных вершин и величественных озер. Пройдитесь по удивительному побережью и насладитесь чистотой природы, которую можно найти только здесь.</p>
                         <ul class="main-article__list">
-                            <li>Продолжительность: 7 дней</li>
-                            <li>Стоимость: 50 000 рублей</li>
-                            <li>Включено в стоимость:
+                            <li> Что вы получите?
                                 <ul class="main-article__nested-list">
-                                    <li>Проживание в отеле на берегу озера</li>                                        <li>Питание (завтрак, обед, ужин)</li>
-                                    <li>Экскурсии по острову</li>
+                                    Проживание в удивительном отеле на берегу озера. Трехразовое питание и экскурсии по острову.
+                                </ul>
+                            </li>
+                            <li> Наше предложение:
+                                <ul class="main-article__nested-list">
+                                    Забудь о скучной обыденной жизни на 7 дней, всего за 5000р.
                                 </ul>
                             </li>
                         </ul>
+                        <button class="main-article__search-button">Узнать больше</button>
                     </div>
-                    <button class="main-article__search-button">Узнать больше</button>
                 </section>
             </div>
 
-            <div class="ad">                    
-                <section class="main-article__section">
-                    <section class="main-article__section">
-                        <h2 class="main-article__section-title">Квесты в Японии</h2>
-                        <p class="main-article__quote"><sup>"</sup>В мире квестов каждая загадка — это ключ к новому приключению<sub>"</sub></p>
-                        <p class="main-article__section-text">Присоединяйтесь к нашим квестам в Японии и погрузитесь в удивительный мир японской культуры и традиций. Вас ждут захватывающие приключения и необычные испытания, которые помогут раскрыть ваш потенциал и научиться работать в команде.</p>
+            <div class="ad"> 
+                <div class="quests-block">               
+                    <section class="main-aside">
+                        <section class="main-aside__section">
+                            <h2 class="main-aside__section-title">Квесты в Японии</h2>
+                            <p class="main-aside__text"><sup>"</sup>В мире квестов каждая загадка — это ключ к новому приключению<sub>"</sub></p>
+                            <p class="main-aside__text">Присоединяйтесь к нашим квестам в Японии и погрузитесь в удивительный мир японской культуры и традиций.</p>
+                        </section>
                     </section>
-                    <button class="main-article__search-button">Узнать больше</button>
-                </section>
+                </div>  
+                <button class="main-article__search-button">Узнать больше</button>  
             </div>
 
             <div class="ad">
                 <aside class="main-aside">
                     <section class="main-aside__section">
                         <h2 class="main-aside__section-title">Курсы программирования</h2>
-                        <p class="main-aside__text">Хотите научиться программировать? Присоединяйтесь к нашим курсам и получите все необходимые знания и навыки для успешной карьеры в IT-индустрии.</p>
+                        <p class="main-aside__text">Хотите научиться программировать?</p>
+                        <p class="main-aside__text">Присоединяйтесь к нашим курсам и получите все необходимые знания.</p>
                         <code class="main-aside__code">&lt;html&gt;<br>&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Пример кода&lt;/title&gt;<br>&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Пример кода на HTML&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</code>
                     </section>
                     <section class="main-atricle__something">Hello world</section>
                     <button class="main-article__search-button">Узнать больше</button>
                 </aside> 
-       
+            </div>
+
+            <div class="ad">
+                <h2 class="main-aside__section-title">Подборка популярных стран: </h2>
+                <section class="main-article__section">
+                    <div class="main-article__table">
+                        <div class="main-article__table-header">
+                            <div>Название страны</div>
+                            <div>Популярность</div>
+                            <div>Время посещения</div>
+                        </div>
+                        <div class="main-article__table-row">
+                            <div>Италия</div>
+                            <div>Высокая</div>
+                            <div>Весна и осень</div>
+                        </div>
+                        <div class="main-article__table-row">
+                            <div>Япония</div>
+                            <div>Средняя</div>
+                            <div>Весна и осень</div>
+                        </div>
+                        <div class="main-article__table-row">
+                            <div>Франция</div>
+                            <div>Малая</div>
+                            <div>Зима и осень</div>
+                        </div>
+                    </div>
+                </section>
+            </div>           
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <h1 class="logo__text">BookMyStay</h1>
+            </div>
+            <div class="footer__social">
+                <p>Мы в социальных сетях:</p>
+                <a href="#" target="_blank">Facebook</a>
             </div>
         </div>
-
-    </main>
-    <footer class="footer">
-        <p class="footer__copyright">Copyright © BookMyStay</p>
+        <p class="footer__copyright">Copyright © 2023 BookMyStay</p>
     </footer>
+    <script src="../scripts/articles.js"></script>
 </body>
 </html>
