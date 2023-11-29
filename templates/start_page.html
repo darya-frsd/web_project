@@ -3,69 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BookMyStay - сервис бронирования жилья.">
+    <meta name="keywords" content="BookMyStay, бронирование, жилье, туры, квесты, курсы программирования">
     <title>BookMyStay</title>
-    <!-- <link rel="stylesheet" href="starter.css"> -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/articles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <nav class="nav">
             <div class="logo">
-                <h1>BookMyStay</h1>
+                <h1 class="logo__text">BookMyStay</h1>
             </div>
             <div class="buttons">
-                <button class="register-button">Зарегистрироваться</button>
-                <button class="login-button">Войти</button>
-                <button class="language-button">Сменить язык</button>
+                <button class="buttons__register">Зарегистрироваться</button>
+                <button class="buttons__login">Войти</button>
+                <button class="buttons__language">Сменить язык</button>
             </div>
         </nav>
     </header>
-    <main>
-        <section>
-            <p>Добро пожаловать в BookMyStay - ваш сервис бронирования жилья. Мы поможем вам найти и забронировать идеальное место для вашего пребывания.</p>
-            <button class="booking-button" onclick="redirectToBookingPage()">Забронировать билеты</button>
-            <button class="booking-button">Забронировать жилье</button>
-            <div class="search-box">
-                <input type="text" placeholder="Куда вы хотите поехать">
-                <input type="date" placeholder="Дата заезда">
-                <input type="date" placeholder="Дата выезда">
-                <input type="number" placeholder="Гости">
-                <button class="search-button">Поиск</button>
+    <main class="main">
+        <section class="main-section">
+            <section class="main-section__text-container">
+                <h2 class="main-section__text">Добро пожаловать в BookMyStay - ваш сервис бронирования жилья.</h2>
+                <p class="main-section__text"> С нашей помощью ваш поиск и бронирование жилья станет легким и приятным процессом. Независимо от того, отправляетесь ли вы в путешествие, деловую поездку или просто ищете уютное место для отдыха, мы гарантируем, что у нас есть идеальный вариант для вас.</p>
+                <button class="main-section__booking-button">Больше информации</button>
+            </section>
+            <section class="main-section__search-box search-box">
+                <input type="text" class="search-box__input" placeholder="Куда вы хотите поехать?">
+                <input type="date" class="search-box__input" placeholder="Дата заезда">
+                <input type="date" class="search-box__input" placeholder="Дата выезда">
+                <input type="number" class="search-box__input" placeholder="Гости">
+                <button class="search-box__search-button">Поиск</button>
+            </section>
+        </section>
+        <!--
+        <section class="main-section__top">
+            <div>
+                <button class="main-section__booking-button" onclick="redirectToBookingPage()">Забронировать билеты</button>
+                <button class="main-section__booking-button">Забронировать жилье</button>
             </div>
-            </section>
+        </section> -->
 
-        <article>
-            <section>
-                <h2>Тур в Сахалин</h2>
-                <ul>
-                    <li>Продолжительность: 7 дней</li>
-                    <li>Стоимость: 50 000 рублей</li>
-                    <li>Включено в стоимость:
-                        <ul>
-                            <li>Проживание в отеле на берегу озера</li>
-                            <li>Питание (завтрак, обед, ужин)</li>
-                            <li>Экскурсии по острову</li>
+
+        <h1>Специальные предложения:</h1>
+        <div class="ads-container">
+            <div class="ad">
+                <section class="main-article__section">
+                    <div class="main-article__section-text">
+                        <h2 class="main-article__section-title">Тур в Сахалин</h2>
+                        <ul class="main-article__list">
+                            <li>Продолжительность: 7 дней</li>
+                            <li>Стоимость: 50 000 рублей</li>
+                            <li>Включено в стоимость:
+                                <ul class="main-article__nested-list">
+                                    <li>Проживание в отеле на берегу озера</li>                                        <li>Питание (завтрак, обед, ужин)</li>
+                                    <li>Экскурсии по острову</li>
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                </ul>
-            </section>
+                    </div>
+                    <button class="main-article__search-button">Узнать больше</button>
+                </section>
+            </div>
 
-            <section>
-                <h2>Квесты в Японии</h2>
-                <p><sup>"</sup>В мире квестов каждая загадка — это ключ к новому приключению<sub>"</sub></p>
-                <p>Присоединяйтесь к нашим квестам в Японии и погрузитесь в удивительный мир японской культуры и традиций. Вас ждут захватывающие приключения и необычные испытания, которые помогут раскрыть ваш потенциал и научиться работать в команде.</p>
-            </section>
-        </article>
+            <div class="ad">                    
+                <section class="main-article__section">
+                    <section class="main-article__section">
+                        <h2 class="main-article__section-title">Квесты в Японии</h2>
+                        <p class="main-article__quote"><sup>"</sup>В мире квестов каждая загадка — это ключ к новому приключению<sub>"</sub></p>
+                        <p class="main-article__section-text">Присоединяйтесь к нашим квестам в Японии и погрузитесь в удивительный мир японской культуры и традиций. Вас ждут захватывающие приключения и необычные испытания, которые помогут раскрыть ваш потенциал и научиться работать в команде.</p>
+                    </section>
+                    <button class="main-article__search-button">Узнать больше</button>
+                </section>
+            </div>
 
-        <aside>
-            <section>
-                <h2>Курсы программирования</h2>
-                <p>Хотите научиться программировать? Присоединяйтесь к нашим курсам и получите все необходимые знания и навыки для успешной карьеры в IT-индустрии.</p>
-                <code>&lt;html&gt;<br>&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Пример кода&lt;/title&gt;<br>&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Пример кода на HTML&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</code>
-            </section>
-        </aside>
+            <div class="ad">
+                <aside class="main-aside">
+                    <section class="main-aside__section">
+                        <h2 class="main-aside__section-title">Курсы программирования</h2>
+                        <p class="main-aside__text">Хотите научиться программировать? Присоединяйтесь к нашим курсам и получите все необходимые знания и навыки для успешной карьеры в IT-индустрии.</p>
+                        <code class="main-aside__code">&lt;html&gt;<br>&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Пример кода&lt;/title&gt;<br>&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Пример кода на HTML&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</code>
+                    </section>
+                    <section class="main-atricle__something">Hello world</section>
+                    <button class="main-article__search-button">Узнать больше</button>
+                </aside> 
+       
+            </div>
+        </div>
+
     </main>
-    <footer>
-        <p>Copyright © BookMyStay</p>
+    <footer class="footer">
+        <p class="footer__copyright">Copyright © BookMyStay</p>
     </footer>
 </body>
 </html>

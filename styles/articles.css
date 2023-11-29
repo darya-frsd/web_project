@@ -1,0 +1,79 @@
+.ads-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ad {
+    flex: 1;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-article__section {
+    /* background-image: url('../styles/images/sahalin.jpg');
+    background-size: cover; */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.main-article__section-title {
+    color: black; 
+    font-weight: bold; 
+}
+
+.main-article__list {
+    color: black;
+}
+
+.main-article__nested-list {
+    color: black; 
+}
+
+.main-article__section-image {
+    flex: 2;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; 
+}
+
+.main-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-aside__code {
+    white-space: pre-line; 
+    text-align: left;
+}
+
+.main-article__search-button {
+    background-color: #a5624b;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.main-article__search-button:hover {
+    background-color: rgb(255,181,142);
+}
+
+.main-atricle__something {
+    text-decoration: line-through;
+    text-transform: uppercase;
+}
