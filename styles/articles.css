@@ -1,0 +1,191 @@
+.ads-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+}
+
+.ad {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 7pt;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+}
+
+.quests-block {
+    background-image: url('../styles/images/sahalin_2.0.jpg');
+    background-size: cover;
+    height: 40vh;
+    background-position: center;
+    color: white; 
+    padding: 20px; 
+    border-radius: 7px;
+}
+
+.main-article__section {
+    display: flex;
+}
+
+.main-article__section-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+    height: auto;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+}
+
+.main-article__section-text {
+    flex: 1;
+    white-space: normal;
+    color:#2c343f;
+}
+
+.main-article__section-title {
+    color: black;
+    font-weight: bold;
+}
+
+.main-article__list li::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url('../styles/images/icon_1.png') center/cover no-repeat;
+    margin-right: 5px;
+}
+
+.main-article__list,
+.main-article__nested-list {
+    color: black;
+    list-style-type: none;
+    padding: 0; 
+}
+
+.main-article__list li
+{
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 5px; 
+}
+
+.main-article__nested-list {
+    font-weight: lighter;
+    color:#2c343f;
+    padding: 0 0 0 37pt;
+}
+
+.main-article__nested-list ul::before {
+    content: none;
+}
+
+.main-article__list li::before {
+    content: '';
+    display: inline-block;
+    width: 40px; 
+    height: 40px; 
+    background: url('../styles/images/icon_1.png') center/cover no-repeat; 
+    margin-right: 5px;
+}
+
+.main-article__search-button {
+    background-color: #a5624b;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.main-article__search-button:hover {
+    background-color: rgb(255, 181, 142);
+}
+
+.main-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-aside__code {
+    white-space: pre-line; 
+    text-align: left;
+}
+
+.main-atricle__something {
+    text-decoration: line-through;
+    text-transform: uppercase;
+}
+
+
+.scroll-buttons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.scroll-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #a5624b;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+
+.scroll-button:hover {
+    background-color: rgb(255, 181, 142);
+}
+
+.main-article__table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.main-article__table-header,
+.main-article__table-row {
+    display: flex;
+    gap: 10px; 
+    padding: 10px;
+}
+
+.main-article__table-header {
+    font-weight: bold;
+    text-align: center;
+    background-color: #a5624b;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.main-article__table-row {
+    background-color: #fff;
+}
+
+.main-article__table-row:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.main-article__table-row:nth-child(odd) {
+    background-color: #fff;
+}
+
+.main-article__table-row > div:first-child {
+    flex: 1;
+    min-width: 100px; 
+}
+
+.main-article__table-row > div:nth-child(2),
+.main-article__table-row > div:nth-child(3) {
+    flex: 0 0 100px;
+}

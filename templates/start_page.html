@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BookMyStay - сервис бронирования жилья.">
+    <meta name="keywords" content="BookMyStay, бронирование, жилье, туры, квесты, курсы программирования">
+    <title>BookMyStay</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/articles.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav-section">
+            <div class="logo">
+                <h1 class="logo__text">BookMyStay</h1>
+            </div>
+            <div class="buttons">
+                <button class="buttons__register">Зарегистрироваться</button>
+                <button class="buttons__login">Войти</button>
+                <button class="buttons__language">Сменить язык</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="main-section">
+            <section class="main-section__text-container">
+                <h2 class="main-section__text">Добро пожаловать в BookMyStay - ваш сервис бронирования жилья.</h2>
+                <p class="main-section__text"> С нашей помощью ваш поиск и бронирование жилья станет легким и приятным процессом. Независимо от того, отправляетесь ли вы в путешествие, деловую поездку или просто ищете уютное место для отдыха, мы гарантируем, что у нас есть идеальный вариант для вас.</p>
+                <button class="main-section__booking-button">Больше информации</button>
+            </section>
+            <section class="main-section__search-box search-box">
+                <input type="text" class="search-box__input" placeholder="Куда вы хотите поехать?">
+                <input type="date" class="search-box__input" placeholder="Дата заезда">
+                <input type="date" class="search-box__input" placeholder="Дата выезда">
+                <input type="number" class="search-box__input" placeholder="Гости">
+                <button class="search-box__search-button">Поиск</button>
+            </section>
+        </section>
+
+        <!--
+        <section class="main-section__top">
+            <div>
+                <button class="main-section__booking-button" onclick="redirectToBookingPage()">Забронировать билеты</button>
+                <button class="main-section__booking-button">Забронировать жилье</button>
+            </div>
+        </section> -->
+
+        <h1>Специальные предложения:</h1>
+        
+        <div class="ads-container">
+            <div class="ad">
+                <section class="main-article__section">
+                    <img src="../styles/images/sahalin_3.0.jpg" alt="Sakhalin Image" class="main-article__section-image">
+                    <div class="main-article__section-text">
+                        <h2 class="main-article__section-title">Тур в Сахалин</h2>
+                        <p>Погрузитесь в красоту горных вершин и величественных озер. Пройдитесь по удивительному побережью и насладитесь чистотой природы, которую можно найти только здесь.</p>
+                        <ul class="main-article__list">
+                            <li> Что вы получите?
+                                <ul class="main-article__nested-list">
+                                    Проживание в удивительном отеле на берегу озера. Трехразовое питание и экскурсии по острову.
+                                </ul>
+                            </li>
+                            <li> Наше предложение:
+                                <ul class="main-article__nested-list">
+                                    Забудь о скучной обыденной жизни на 7 дней, всего за 5000р.
+                                </ul>
+                            </li>
+                        </ul>
+                        <button class="main-article__search-button">Узнать больше</button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="ad"> 
+                <div class="quests-block">               
+                    <section class="main-aside">
+                        <section class="main-aside__section">
+                            <h2 class="main-aside__section-title">Квесты в Японии</h2>
+                            <p class="main-aside__text"><sup>"</sup>В мире квестов каждая загадка — это ключ к новому приключению<sub>"</sub></p>
+                            <p class="main-aside__text">Присоединяйтесь к нашим квестам в Японии и погрузитесь в удивительный мир японской культуры и традиций.</p>
+                        </section>
+                    </section>
+                </div>  
+                <button class="main-article__search-button">Узнать больше</button>  
+            </div>
+
+            <div class="ad">
+                <aside class="main-aside">
+                    <section class="main-aside__section">
+                        <h2 class="main-aside__section-title">Курсы программирования</h2>
+                        <p class="main-aside__text">Хотите научиться программировать?</p>
+                        <p class="main-aside__text">Присоединяйтесь к нашим курсам и получите все необходимые знания.</p>
+                        <code class="main-aside__code">&lt;html&gt;<br>&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Пример кода&lt;/title&gt;<br>&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Пример кода на HTML&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</code>
+                    </section>
+                    <section class="main-atricle__something">Hello world</section>
+                    <button class="main-article__search-button">Узнать больше</button>
+                </aside> 
+            </div>
+
+            <div class="ad">
+                <h2 class="main-aside__section-title">Подборка популярных стран: </h2>
+                <section class="main-article__section">
+                    <div class="main-article__table">
+                        <div class="main-article__table-header">
+                            <div>Название страны</div>
+                            <div>Популярность</div>
+                            <div>Время посещения</div>
+                        </div>
+                        <div class="main-article__table-row">
+                            <div>Италия</div>
+                            <div>Высокая</div>
+                            <div>Весна и осень</div>
+                        </div>
+                        <div class="main-article__table-row">
+                            <div>Япония</div>
+                            <div>Средняя</div>
+                            <div>Весна и осень</div>
+                        </div>
+                        <div class="main-article__table-row">
+                            <div>Франция</div>
+                            <div>Малая</div>
+                            <div>Зима и осень</div>
+                        </div>
+                    </div>
+                </section>
+            </div>           
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <h1 class="logo__text">BookMyStay</h1>
+            </div>
+            <div class="footer__social">
+                <p>Мы в социальных сетях:</p>
+                <a href="#" target="_blank">Facebook</a>
+            </div>
+        </div>
+        <p class="footer__copyright">Copyright © 2023 BookMyStay</p>
+    </footer>
+    <script src="../scripts/articles.js"></script>
+</body>
+</html>
