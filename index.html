@@ -6,20 +6,24 @@
     <meta name="description" content="BookMyStay - сервис бронирования жилья.">
     <meta name="keywords" content="BookMyStay, бронирование, жилье, туры, квесты, курсы программирования">
     <title>BookMyStay</title>
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/articles.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/articles.css">
+    <script src="scripts/repeating.js"></script>
 </head>
 <body>
-
     <header class="header">
         <nav class="nav-section">
             <div class="logo">
                 <h1 class="logo__text">BookMyStay</h1>
             </div>
             <div class="buttons">
-                <button class="buttons__register">Зарегистрироваться</button>
-                <button class="buttons__login">Войти</button>
-                <button class="buttons__language">Сменить язык</button>
+                <button id="registerButton" class="buttons__register">
+                    <a href="signup_page.html">Зарегистрироваться</a>
+                </button>
+                <button id="loginButton" class="buttons__login">
+                    <a href="login_page.html">Войти</a>
+                </button>
+                <button id="languageButton" class="buttons__language">Сменить язык</button>
             </div>
         </nav>
     </header>
@@ -29,14 +33,18 @@
             <section class="main-section__text-container">
                 <h2 class="main-section__text">Добро пожаловать в BookMyStay - ваш сервис бронирования жилья.</h2>
                 <p class="main-section__text"> С нашей помощью ваш поиск и бронирование жилья станет легким и приятным процессом. Независимо от того, отправляетесь ли вы в путешествие, деловую поездку или просто ищете уютное место для отдыха, мы гарантируем, что у нас есть идеальный вариант для вас.</p>
-                <button class="main-section__booking-button">Больше информации</button>
+                <button id="bookingButton" class="main-section__booking-button">
+                    <a href="japan_page.html">Узнать больше</a>
+                </button>
             </section>
             <section class="main-section__search-box search-box">
                 <input type="text" class="search-box__input" placeholder="Куда вы хотите поехать?">
                 <input type="date" class="search-box__input" placeholder="Дата заезда">
                 <input type="date" class="search-box__input" placeholder="Дата выезда">
                 <input type="number" class="search-box__input" placeholder="Гости">
-                <button class="search-box__search-button">Поиск</button>
+                <button class="search-box__search-button">
+                    <a href="houses_page.html">Поиск</a>
+                </button>
             </section>
         </section>
 
@@ -53,7 +61,7 @@
         <div class="ads-container">
             <div class="ad">
                 <section class="main-article__section">
-                    <img src="../styles/images/sahalin_3.0.jpg" alt="Sakhalin Image" class="main-article__section-image">
+                    <img src="styles/images/sahalin_3.0.jpg" alt="Sakhalin Image" class="main-article__section-image">
                     <div class="main-article__section-text">
                         <h2 class="main-article__section-title">Тур в Сахалин</h2>
                         <p>Погрузитесь в красоту горных вершин и величественных озер. Пройдитесь по удивительному побережью и насладитесь чистотой природы, которую можно найти только здесь.</p>
@@ -69,7 +77,9 @@
                                 </ul>
                             </li>
                         </ul>
-                        <button class="main-article__search-button">Узнать больше</button>
+                        <button id="sakhalinButton" class="main-article__search-button">
+                            <a href="sahalin_page.html">Узнать больше</a>
+                        </button>
                     </div>
                 </section>
             </div>
@@ -84,7 +94,9 @@
                         </section>
                     </section>
                 </div>  
-                <button class="main-article__search-button">Узнать больше</button>  
+                <button id="questsButton" class="main-article__search-button">
+                    <a href="japan_page.html">Узнать больше</a>
+                </button>
             </div>
 
             <div class="ad">
@@ -96,7 +108,9 @@
                         <code class="main-aside__code">&lt;html&gt;<br>&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Пример кода&lt;/title&gt;<br>&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Пример кода на HTML&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</code>
                     </section>
                     <section class="main-atricle__something">Hello world</section>
-                    <button class="main-article__search-button">Узнать больше</button>
+                    <button id="coursesButton" class="main-article__search-button">
+                        <a href="japan_page.html">Узнать больше</a>
+                    </button>
                 </aside> 
             </div>
 
@@ -128,6 +142,7 @@
                 </section>
             </div>           
         </div>
+        
     </main>
 
     <footer class="footer-section">
@@ -141,7 +156,11 @@
             </div>
         </div>
         <p class="footer__copyright">Copyright © 2023 BookMyStay</p>
+        <div id="jsi-flying-fish-container" class="container"></div>
     </footer>
-    <script src="../scripts/articles.js"></script>
+
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/articles.js"></script>
+    <script src="scripts/buttons.js"></script>
 </body>
 </html>

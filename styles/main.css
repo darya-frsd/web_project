@@ -9,6 +9,33 @@ body {
     line-height: normal;
 }
 
+ .flying-plane {
+    position: sticky;
+    top: 50%;
+    transform: translateX(-100%) translateY(-50%);
+    transition: transform 0.5s linear;
+}
+
+.container {
+    overflow: hidden;
+    position: relative; /* Добавляем position: relative для корректного позиционирования потомков */
+}
+
+a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+a:active {
+    color: black !important;
+}
+
+
 .header {
     position: sticky;
     top: 0;
@@ -82,7 +109,7 @@ body {
     padding: 15px;
     border-radius: 10px;
     display: flex;
-    margin-left: 4;
+    margin-left: 40px;
     align-items: center;
     width: 50%;
 }
@@ -124,6 +151,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 30px;
+    padding: 10px;
 }
 
 .footer__logo img {

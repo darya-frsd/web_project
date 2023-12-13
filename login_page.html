@@ -1,0 +1,38 @@
+<!-- login_page.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BookMyStay - сервис бронирования жилья.">
+    <meta name="keywords" content="BookMyStay, бронирование, жилье, туры, квесты, курсы программирования">
+    <title>BookMyStay - Вход</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <script src="scripts/repeating.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-header">Добро пожаловать в BookMyStay</h1>
+        <p class="login-subtext">Пожалуйста, войдите в свой аккаунт</p>
+
+        <form id="loginForm" class="login-form">
+            <label for="username" class="login-label">Имя пользователя:</label>
+            <input type="text" id="username" name="username" class="login-input" required>
+
+            <label for="password" class="login-label">Пароль:</label>
+            <input type="password" id="password" name="password" class="login-input" required>
+
+            <button type="submit" class="login-button">Войти</button>
+        </form>
+
+        <p class="login-signup-link">Еще нет аккаунта? <a href="signup_page.html">Зарегистрируйтесь здесь</a></p>
+    </div>
+
+    <footer>
+        <div id="jsi-flying-fish-container" class="container"></div>
+    </footer>
+    <script src="scripts/buttons.js"></script>
+
+</body>
+</html>
