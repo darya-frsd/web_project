@@ -148,44 +148,23 @@
 }
 
 .main-article__table {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.main-article__table-header,
-.main-article__table-row {
-    display: flex;
-    gap: 10px; 
+.main-article__table th, .main-article__table td {
+    border: 1px solid #ddd;
     padding: 10px;
+    text-align: left;
 }
 
-.main-article__table-header {
-    font-weight: bold;
-    text-align: center;
+.main-article__table th {
     background-color: #a5624b;
     color: #fff;
-    border-radius: 5px;
+    font-weight: bold;
 }
 
-.main-article__table-row {
-    background-color: #fff;
-}
-
-.main-article__table-row:nth-child(even) {
+.main-article__table tbody tr:nth-child(even) {
     background-color: #f5f5f5;
-}
-
-.main-article__table-row:nth-child(odd) {
-    background-color: #fff;
-}
-
-.main-article__table-row > div:first-child {
-    flex: 1;
-    min-width: 100px; 
-}
-
-.main-article__table-row > div:nth-child(2),
-.main-article__table-row > div:nth-child(3) {
-    flex: 0 0 100px;
 }
