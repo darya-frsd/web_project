@@ -1,0 +1,134 @@
+/* styles/schedule.css */
+
+.page {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #a0d2eb;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form__input,
+.form__select,
+.form__submit-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.form__submit-button {
+    background-color: #a28089;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.form__submit-button:hover {
+    background-color: #8b636e;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #a28089; /* Цвет фона первой строки */
+    color: #fff; /* Цвет текста первой строки */
+    font-weight: bold;
+}
+
+.schedule-container {
+    margin-top: 20px;
+}
+
+.footer-section {
+    background-color: #a0d2eb;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo {
+    flex: 1;
+}
+
+.logo__text {
+    font-size: 18px;
+}
+
+.footer__social {
+    flex: 1;
+}
+
+.social__text {
+    margin-bottom: 5px;
+}
+
+.social__link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer__copyright {
+    margin-top: 10px;
+}
+
+.container {
+    /* Add container styles if needed */
+}

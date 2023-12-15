@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/schedule.css">
+    <title>Расписание</title>
+</head>
+<body class="page__body">
+    <header class="header">
+        <h1 class="header__title">Конструктор расписания</h1>
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="code_main_page.html" class="nav__link">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <form id="scheduleForm" class="form">
+            <label for="days" class="form__label">Выберите количество дней в неделю:</label>
+            <select id="days" name="days" class="form__select">
+                <option value="5">5 дней</option>
+                <option value="6">6 дней</option>
+            </select>
+
+            <label for="maxLessons" class="form__label">Максимальное количество занятий в день:</label>
+            
+            <input type="number" id="maxLessons" name="maxLessons" min="1" max="10" value="5" class="form__input">
+
+            <label for="language" class="form__label">Язык таблицы:</label>
+            <input type="text" id="language" name="language" value="Русский" class="form__input">
+            <label for="subjects" class="form__label">Введите предметы через запятую:</label>
+            <input type="text" id="subjects" name="subjects" class="form__input">
+
+            <button type="submit" class="form__submit-button">Сгенерировать расписание</button>
+        </form>
+
+        <div id="scheduleContainer" class="schedule-container"></div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <h1 class="logo__text">LearnEasy</h1>
+            </div>
+            <div class="footer__social">
+                <p class="social__text">Мы в социальных сетях:</p>
+                <a href="#" target="_blank" class="social__link">Facebook</a>
+            </div>
+        </div>
+        <p class="footer__copyright">Copyright © 2023 LearnEasy</p>
+        <div id="jsi-flying-fish-container" class="container"></div>
+    </footer>
+
+    <script src="scripts/schedule.js"></script>
+</body>
+</html>
