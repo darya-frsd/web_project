@@ -18,7 +18,7 @@ body {
 
 .container {
     overflow: hidden;
-    position: relative; /* Добавляем position: relative для корректного позиционирования потомков */
+    position: relative;
 }
 
 a {

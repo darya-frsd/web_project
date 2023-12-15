@@ -24,8 +24,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginMessage = document.getElementById('loginMessage');
     const loginForm = document.getElementById('loginForm');
     const signupForm = document.getElementById('signupForm');
+    const profileButton = document.getElementById('profileButton');
 
     console.log('Buttons and elements retrieved:', registerButton, loginButton, languageButton, bookingButton, sakhalinButton, questsButton, coursesButton, loginMessage, loginForm);
+
+    profileButton.addEventListener('click', function () {
+        console.log('Register button clicked.');
+        window.location.href = 'profile_page.html'; 
+    });
+
+    registerButton.addEventListener('click', function () {
+        console.log('Register button clicked.');
+        window.location.href = 'signup_page.html'; 
+    });
 
     registerButton.addEventListener('click', function () {
         console.log('Register button clicked.');
