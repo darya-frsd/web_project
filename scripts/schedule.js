@@ -2,6 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('scheduleForm');
     const scheduleContainer = document.getElementById('scheduleContainer');
 
+    const savedParams = localStorage.getItem('scheduleParams');
+    if (savedParams) {
+        const { days, maxLessons, language } = JSON.parse(savedParams);
+        form.elements.days.value = days;
+        form.elements.maxLessons.value = maxLessons;
+        form.elements.language.value = language;
+    }
+
+    let savedSubjects = getSubjectsFromLocalStorage();
+
+    const repeatedSubjects = repeatSubjects(savedSubjects, 1);
+    const scheduleTable = generateSchedule(form.elements.days.value, form.elements.maxLessons.value, form.elements.language.value, repeatedSubjects);
+    scheduleContainer.innerHTML = '';
+    scheduleContainer.appendChild(scheduleTable);
+
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -11,35 +26,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const addLessons = 1;
         const subjects = form.elements.subjects.value;
         const subjectList = subjects.split(',').map(subject => subject.trim());
-        addSubjectsToLocalStorage(subjectList);
-        const repeatedSubjects = repeatSubjects(subjectList, addLessons);
-        const scheduleTable = generateSchedule(days, maxLessons, language, repeatedSubjects);
 
+        savedSubjects = savedSubjects.concat(subjectList);
+        addSubjectsToLocalStorage(savedSubjects);
+
+        const repeatedSubjects = repeatSubjects(savedSubjects, addLessons);
+
+        const scheduleTable = generateSchedule(days, maxLessons, language, repeatedSubjects);
         scheduleContainer.innerHTML = '';
         scheduleContainer.appendChild(scheduleTable);
     });
 
-    const savedParams = localStorage.getItem('scheduleParams');
-    if (savedParams) {
-        const { days, maxLessons, language } = JSON.parse(savedParams);
-        form.elements.days.value = days;
-        form.elements.maxLessons.value = maxLessons;
-        form.elements.language.value = language;
-
-        const savedSubjects = getSubjectsFromLocalStorage();
-        form.elements.subjects.value = savedSubjects.join(', ');
-
-        const repeatedSubjects = repeatSubjects(savedSubjects, form.elements.maxLessons.value);
-        const scheduleTable = generateSchedule(days, maxLessons, language, repeatedSubjects);
-        scheduleContainer.appendChild(scheduleTable);
-    }
-
     function addSubjectsToLocalStorage(subjectList) {
-        localStorage.setItem('scheduleParams', JSON.stringify({
-            days: form.elements.days.value,
-            maxLessons: form.elements.maxLessons.value,
-            language: form.elements.language.value
-        }));
         localStorage.setItem('subjects', JSON.stringify(subjectList));
     }
 
@@ -47,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return JSON.parse(localStorage.getItem('subjects')) || [];
     }
 
-    function repeatSubjects(subjectList, maxLessons) {
+    function repeatSubjects(subjectList, addLessons) {
         const repeatedSubjects = [];
-        for (let i = 0; i < maxLessons; i++) {
+        for (let i = 0; i < addLessons; i++) {
             repeatedSubjects.push(...subjectList);
         }
         return repeatedSubjects;
@@ -62,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const headerRow = document.createElement('tr');
         const headerCell = document.createElement('th');
         headerCell.textContent = `Расписание (${language})`;
-        headerCell.colSpan = days; 
+        headerCell.colSpan = days;
         headerRow.appendChild(headerCell);
         table.appendChild(headerRow);
 
