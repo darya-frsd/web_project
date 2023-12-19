@@ -56,6 +56,18 @@ a:active {
     margin: 0;
 }
 
+/* Стили для активного таба */
+.active-tab {
+    background-color: #ddd;
+    border-radius: 50px; /* Круглая форма для активного таба */
+}
+
+/* Анимация изменения формы кнопки */
+.buttons button {
+    transition: border-radius 0.5s;
+}
+
+
 .buttons button {
     margin: 5px;
     padding: 8px 16px;
@@ -66,8 +78,10 @@ a:active {
     border-radius: 2px;
 }
 
+
 .buttons button:hover {
     background-color: rgb(255, 181, 142);
+    border-radius: 20px; /* Изменение формы на hover */
 }
 
 .main {

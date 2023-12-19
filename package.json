@@ -1,0 +1,21 @@
+{
+  "name": "web_project",
+  "version": "1.0.0",
+  "description": "ITMO IS project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "strapi develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darya-frsd/web_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darya-frsd/web_project/issues"
+  },
+  "homepage": "https://github.com/darya-frsd/web_project#readme"
+}
