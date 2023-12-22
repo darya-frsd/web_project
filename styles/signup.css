@@ -5,11 +5,11 @@ body {
     padding: 0;
 }
 
-.main {
+.page {
     padding: 20px;
 }
 
-.main-section {
+.signup-section {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -18,22 +18,22 @@ body {
     margin: 0 auto;
 }
 
-.main-section__text {
+.signup-section__text {
     text-align: center;
     color: #333;
 }
 
-form {
+.form {
     margin-top: 20px;
 }
 
-label {
+.form-label {
     display: block;
     margin-bottom: 8px;
     color: #333;
 }
 
-input {
+.form-input {
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
@@ -42,7 +42,7 @@ input {
     border-radius: 4px;
 }
 
-button {
+.button {
     background-color: #a5624b;
     color: #fff;
     padding: 10px 20px;
@@ -51,6 +51,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     background-color: rgb(255, 181, 142);
 }

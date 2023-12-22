@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navItems = document.querySelectorAll('.nav__item');
+
+    navItems.forEach(item => {
+        const link = item.querySelector('.nav__link');
+        if (link.getAttribute('href') === currentPage) {
+            item.classList.add('active');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('scheduleForm');
     const scheduleContainer = document.getElementById('scheduleContainer');
 

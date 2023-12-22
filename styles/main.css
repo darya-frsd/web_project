@@ -18,7 +18,7 @@ body {
 
 .container {
     overflow: hidden;
-    position: relative; /* Добавляем position: relative для корректного позиционирования потомков */
+    position: relative; 
 }
 
 a {
@@ -56,6 +56,16 @@ a:active {
     margin: 0;
 }
 
+.active-tab {
+    background-color: #ddd;
+    border-radius: 50px;
+}
+
+.buttons button {
+    transition: border-radius 0.5s;
+}
+
+
 .buttons button {
     margin: 5px;
     padding: 8px 16px;
@@ -66,8 +76,10 @@ a:active {
     border-radius: 2px;
 }
 
+
 .buttons button:hover {
     background-color: rgb(255, 181, 142);
+    border-radius: 20px;
 }
 
 .main {
@@ -232,4 +244,59 @@ a:active {
     .footer__social a {
         margin-right: 0;
     }
+}
+
+.menu-button {
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #a5624b;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px; 
+    overflow-y: auto; 
+    flex-direction: column;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style-type: none;
+}
+
+.menu li {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu a.active-tab {
+    background-color: #a5624b;
+    border-radius: 5px;
 }
